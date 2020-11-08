@@ -23,8 +23,7 @@ const requestHandler = (request) => {
 
 // Interceptor de response ERROR.
 const errorHandler = (error) => {
-    setTimeout(function(){ dispatch({ type: 'LOADING_OFF' }) }, 10000);
-    // dispatch({ type: 'LOADING_OFF' })
+    dispatch({ type: 'LOADING_OFF' })
     let errorMessage = 'Error de conexion'
 
     if (error.response) {
