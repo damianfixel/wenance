@@ -40,6 +40,7 @@ describe('asimple ctions', () => {
 
 describe('async actions', () => {
     it('fetch service success', () => {
+        service.getPeople.mockResolvedValue({ data: true })
         const expectedActions = [{ type: INFO_OK, value: true }]
         const store = mockStore({ actualPage: 1 })
 
