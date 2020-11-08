@@ -1,11 +1,7 @@
 import Axios from 'axios'
-// import { LocalStorageHelper } from '../shared/helpers/LocalStorageHelper';
 import { store } from '../App'
 
-// for auth for example
-// const localStorageHelper = new LocalStorageHelper();
 const { dispatch } = store
-Axios.defaults.baseURL = process.env.REACT_APP_API_ENDPOINT
 
 Axios.interceptors.request.use((request) => requestHandler(request))
 
@@ -21,7 +17,7 @@ const requestHandler = (request) => {
     return request
 }
 
-// Interceptor de response ERROR.
+// Interceptor response ERROR.
 const errorHandler = (error) => {
     dispatch({ type: 'LOADING_OFF' })
     let errorMessage = 'Error de conexion'
@@ -69,7 +65,7 @@ const errorHandler = (error) => {
     }
 }
 
-// Interceptor de response OK.
+// Interceptor  response OK.
 const successHandler = (response) => {
     dispatch({ type: 'LOADING_OFF' })
 

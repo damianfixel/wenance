@@ -21,9 +21,8 @@ export function loadingOff() {
 
 
 export function handleChange(value) {
-    return function (dispatch) {
-        // maybe you want to use some data from the redux state
-        // const { valueToShowInReadComponent } = getState().withReduxState;
+    return function (dispatch) { // getState if you want to use some stuff from redux. getState()....
+        
         dispatch({ type: HANDLE_CHANGE, value: value })
     }
 }

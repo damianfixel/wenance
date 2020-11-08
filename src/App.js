@@ -34,8 +34,6 @@ function myApp(props) {
 }
 
 const mapStateToProps = (state) => ({
-  // value: state.withReduxState.valueToShowInReadComponent,
-  // valueToShowInReadComponent: state.withReduxState.valueToShowInReadComponent
   state: state
 })
 
